@@ -41,11 +41,11 @@ struct EqualizerIndicatorItemView: View {
             .frame(width: itemSize, height:  size.height) //*CGFloat.random(in: 0.3...0.9)
             .scaleEffect(x: 1, y: scale, anchor: .center)
             .onAppear {
-                scale = 1
+                scale = 1.1
                 withAnimation(animation) {
-                    scale = 0.4
+                    scale = 0.3
                 }
             }
-            .offset(x: 3 * itemSize * CGFloat(index) - size.width / 2 + itemSize / 2)
+            .offset(x: 2 * itemSize * CGFloat(index) - size.width / 2 + itemSize / 2)
     }
 }
