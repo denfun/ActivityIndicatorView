@@ -38,7 +38,7 @@ struct EqualizerIndicatorItemView: View {
             .delay(Double(index) / Double(count) / 2)
 
         return RoundedRectangle(cornerRadius: 3)
-            .frame(width: itemSize, height:  CGFloat.random(in: 1...size.height))
+            .frame(width: itemSize, height:  CGFloat(Int.random(in: 1...size.height)))
             .scaleEffect(x: 1, y: scale, anchor: .center)
             .onAppear {
                 scale = 1
