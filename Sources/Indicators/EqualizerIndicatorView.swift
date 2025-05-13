@@ -35,7 +35,7 @@ struct EqualizerIndicatorItemView: View {
 
         let animation = Animation.easeInOut.delay(0.2)
             .repeatForever(autoreverses: true)
-            .delay(Double(index) / Double(count) / 3)
+            .delay(Double(Int.random(in:0...index)) / Double(count) / 2)
 
         return RoundedRectangle(cornerRadius: 3)
             .frame(width: itemSize, height:  size.height) //*CGFloat.random(in: 0.3...0.9)
@@ -46,6 +46,6 @@ struct EqualizerIndicatorItemView: View {
                     scale = 0.4
                 }
             }
-            .offset(x: 2 * itemSize * CGFloat(index) - size.width / 2 + itemSize / 2)
+            .offset(x: 3 * itemSize * CGFloat(index) - size.width / 2 + itemSize / 2)
     }
 }
