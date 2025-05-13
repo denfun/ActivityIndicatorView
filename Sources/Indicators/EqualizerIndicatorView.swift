@@ -31,14 +31,14 @@ struct EqualizerIndicatorItemView: View {
     @State private var scale: CGFloat = 0
 
     var body: some View {
-        let itemSize = size.width / CGFloat(count) / 3
+        let itemSize = size.width / CGFloat(count) / 2
 
         let animation = Animation.easeOut.delay(0.2)
             .repeatForever(autoreverses: true)
             .delay(Double(index) / Double(count) / 2)
 
         return RoundedRectangle(cornerRadius: 3)
-            .frame(width: itemSize, height: size.height)
+            .frame(width: itemSize, height:  Int.random(in: 1...size.height))
             .scaleEffect(x: 1, y: scale, anchor: .center)
             .onAppear {
                 scale = 1
