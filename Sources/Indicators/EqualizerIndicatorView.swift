@@ -35,13 +35,13 @@ struct EqualizerIndicatorItemView: View {
 
         let animation = Animation.easeInOut.delay(0.2)
             .repeatForever(autoreverses: true)
-            .delay(Double(Int.random(in:0...index)) / Double(count) / 2)
+            .delay(Double(index*3) / Double(count) / 2)
 
         return RoundedRectangle(cornerRadius: 3)
             .frame(width: itemSize, height:  size.height) //*CGFloat.random(in: 0.3...0.9)
             .scaleEffect(x: 1, y: scale, anchor: .center)
             .onAppear {
-                scale = 1.1
+                scale = 1.05
                 withAnimation(animation) {
                     scale = 0.3
                 }
