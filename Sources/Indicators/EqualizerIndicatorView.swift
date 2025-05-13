@@ -46,6 +46,6 @@ struct EqualizerIndicatorItemView: View {
                     scale = 0.3
                 }
             }
-            .offset(x: 2 * itemSize * CGFloat(index) - size.width / 2 + itemSize / 2)
+            .offset(x: 2 * itemSize * CGFloat(index*3) - size.width / 2 + itemSize / 2)
     }
 }
