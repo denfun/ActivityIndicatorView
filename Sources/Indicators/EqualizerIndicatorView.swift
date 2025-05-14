@@ -31,7 +31,7 @@ struct EqualizerIndicatorItemView: View {
     @State private var scale: CGFloat = 0
 
     var body: some View {
-        let itemSize = size.width / CGFloat(count) / 3
+        let itemSize = size.width / CGFloat(count) / 2
 
         let animation = Animation.linear.delay(0.15)
             .repeatForever(autoreverses: true)
